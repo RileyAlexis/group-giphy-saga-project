@@ -25,6 +25,9 @@ const giphyFavorites = (state = [], action) => {
     if (action.type === 'SET_FAVORITES') {
         return action.payload;
     }
+    else if (action.type === 'ADD_FAVORITE', action) {
+        return [...state, action.payload];
+    }
     return state;
 }
 

@@ -7,6 +7,8 @@ import Header from './Header/Header';
 import axios from 'axios';
 
 //Components
+import GiphyGallery from '../GiphyGallery/GiphyGallery';
+
 
 function App(props) {
 
@@ -33,6 +35,7 @@ const getFavorites = () => {
     
     <Route path="/">
       <Search />
+      <GiphyGallery />
     </Route>
     <Route path="/favorites">
       <Favorite />
