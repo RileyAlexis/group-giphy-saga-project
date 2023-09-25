@@ -18,12 +18,20 @@ const gifphyCategory = (state = [], action) => {
     return state;
 }
 
+const giphyFavorites = (state = [], action) => {
+    if (action.type === 'SET_FAVORITES') {
+        return action.payload;
+    }
+    return state;
+}
+
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   combineReducers({ 
     giphyArr,
     gifphyCategory,
+    giphyFavorites
 
                 }),
     applyMiddleware(sagaMiddleware, logger)
