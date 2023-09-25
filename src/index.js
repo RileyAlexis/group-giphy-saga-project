@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
 import App from './components/App/App';
 
+
 const giphyArr = (state = [], action) => {
     if (action.type === 'SETGIFS') {
         return action.payload;

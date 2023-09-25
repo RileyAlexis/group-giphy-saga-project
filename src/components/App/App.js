@@ -26,6 +26,7 @@ const getFavorites = () => {
   }, []);
 
   return (
+
     <div className="container">
       <Header />
     
