@@ -2,13 +2,14 @@ import React from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Header from './Header/Header';
+
 
 import axios from 'axios';
 
 //Components
 import GiphyGallery from '../GiphyGallery/GiphyGallery';
-
+import Search from '../Search/Search';
+import Header from './Header/Header';
 
 function App(props) {
 
@@ -38,7 +39,7 @@ const getFavorites = () => {
       <GiphyGallery />
     </Route>
     <Route path="/favorites">
-      <Favorite />
+      
     </Route>
     </div>
 
