@@ -6,7 +6,7 @@ const router = express.Router();
 const giphykey = process.env.GIPHY_KEY;
 
 
-router.get('/search', (req, res) => {
+router.post('/search', (req, res) => {
 
     const searchString = req.body.searchString;
     const rating = req.body.rating;
