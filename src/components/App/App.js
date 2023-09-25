@@ -25,15 +25,15 @@ const getFavorites = () => {
 }
 
   useEffect(() => {
-    console.log(cookies);
     getFavorites();
   }, []);
 
   return (
-
+    <Router>
     <div className="container">
       <Header />
     
+
     <Route path="/">
       <Search />
       <GiphyGallery />
@@ -42,6 +42,7 @@ const getFavorites = () => {
       
     </Route>
     </div>
+    </Router>
 
   );
 }

@@ -3,7 +3,7 @@ const pool = require('../modules/pool');
 const dotenv = require('dotenv');
 const axios = require('axios');
 const router = express.Router();
-const giphykey = process.env.GIPHY_KEY;
+const giphykey = 'KktrbnUPsAJT6lmiJv5vmiHhHXhYYrkQ';
 
 
 router.post('/search', (req, res) => {
@@ -12,7 +12,7 @@ router.post('/search', (req, res) => {
     const rating = req.body.rating;
     const gifLimit = req.body.gifLimit;
 
-    axios.get(`api.giphy.com/v1/gifs/search?api_key=${giphykey}&q=${searchString}&rating=${rating}&limit=${gifLimit}`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${giphykey}&q=${searchString}&rating=${rating}&limit=${gifLimit}`)
         .then((response) => {
             res.send(response.data)
         }).catch((error) => {
