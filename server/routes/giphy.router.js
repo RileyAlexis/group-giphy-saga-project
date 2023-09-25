@@ -21,14 +21,4 @@ router.get('/search', (req, res) => {
         })
 })
 
-app.get('/gifs', (req, res) => {
-    axios.get(`https://api.giphy.com/v1/gifs/trending?api_key=${giphy_api_key}&rating=R&limit=25`)
-    .then((response) => {
-        res.send(response.data);
-    }).catch((error) => {
-        console.error('Error making Giphy API request', error);
-        res.sendStatus(500);
-    })
-})
-
 module.exports = router;
